@@ -4,11 +4,13 @@ import Watchlist from './components/Watchlist';
 import Watched from './components/Watched';
 import Add from './components/Add';
 import './App.css'
+import {GlobalProvider} from './context/Global_State'
 function App() {
 
 
   return (
      <>
+       <GlobalProvider>
          <Router>
                  <Header/>
                  <Routes>
@@ -17,6 +19,7 @@ function App() {
                         <Route  path='/add' element={<Add/>}/>
                  </Routes>
          </Router>
+       </GlobalProvider>
      </>
   )
 }
