@@ -1,9 +1,19 @@
 import React,{createContext,useReducer,useEffect} from 'react'
+import AppReducer from './AppReducer';
+//initisl state
+const initialState={
+    watchlist:[],
+    watched:[],
+};
 
-function global_state() {
-  return (
-    <div>global_state</div>
-  )
+
+//create context
+
+export const GlobalContext=createContext(initialState);
+
+//provider components
+
+export const GlobalProvider=props=>{
+    const [state, dispatch]=useReducer(AppReducer, initialState);
+
 }
-
-export default global_state
