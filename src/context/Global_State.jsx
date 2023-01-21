@@ -15,14 +15,16 @@ export const globalContext=createContext(initialState);
 
 //provider
 
-const addMovieToWatchlist=(movie)=>{
-    dispatch({type:"ADD_MOVIE_TO_WATCHLIST", payload:movie})
-}
 
 export const GlobalProvider=(props)=>{
     const [state, dispatch]=useReducer(AppReducer, initialState);
 
     //actions
+
+    const addMovieToWatchlist=(movie)=>{
+        dispatch({type: "ADD_MOVIE_TO_WATCHLIST", payload:movie})
+    }
+    
 
 
     return (

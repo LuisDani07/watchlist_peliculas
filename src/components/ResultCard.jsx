@@ -2,6 +2,9 @@ import React,{useContext} from 'react';
 import {globalContext} from '../context/Global_State';
 
 function ResultCard({movie}) {
+
+  const { addMovieToWatchlist}=useContext(globalContext);
+
   return (
     <div className='result-card'>
         <div className="poster-wrapper">
@@ -19,7 +22,7 @@ function ResultCard({movie}) {
                 </h4>
             </div>
               <div className="controls">
-                   <button className="btn">
+                   <button className="btn" onClick={()=>addMovieToWatchlist(movie)}>
                     Add to watchlist
                    </button>
               </div>
