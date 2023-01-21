@@ -1,4 +1,5 @@
-import React from 'react'
+import React,{useContext} from 'react';
+import {globalContext} from '../context/Global_State';
 
 function ResultCard({movie}) {
   return (

@@ -3,9 +3,9 @@ export default (state,action)=>{
         case "ADD_MOVIE_TO_WATCHLIST":
             return{
                 ...state,
-                watchlist:[action.payload,...state.watchlist],
+                watchlist:[action.payload, ...state]
             }
         default:
-            return state;
+            return state
     }
 }
