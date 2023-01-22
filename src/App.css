@@ -145,3 +145,13 @@ list-style: none;
 .result-card .controls button {
   margin-right: 10px;
 }
+/* Movie Page */
+.movie-page {
+    padding: 30px 0;
+  }
+.movie-page .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+ }
