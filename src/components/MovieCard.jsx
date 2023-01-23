@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import MovieControls from './MovieControls'
 
 function MovieCard({movie, type}) {
   return (
@@ -9,6 +10,7 @@ function MovieCard({movie, type}) {
             ):(
                 <div className="filler-poster"></div>
             )}
+            <MovieControls type={type} movie={movie}/>
       </div>
   )
 }
