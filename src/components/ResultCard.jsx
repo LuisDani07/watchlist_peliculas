@@ -3,10 +3,11 @@ import {globalContext} from '../context/Global_State';
 
 function ResultCard({movie}) {
 
-  const { addMovieToWatchlist, watchlist}=useContext(globalContext);
+  const { addMovieToWatchlist, watchlist, watched}=useContext(globalContext);
 
    let storedMovie=watchlist.find(o=>o.id===movie.id);
-  const watchlistDisabled=storedMovie? true:false;
+   let storedMovieWatched=watched.find((o)=>o.id===movie.id);
+  const watchlistDisabled=storedMovie? true : storedMovieWatched ? true:false;
   return (
     <div className='result-card'>
         <div className="poster-wrapper">
